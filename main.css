@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+/* 웹폰트 설정 */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+/* ROOT */
+:root {
+    --dark-color: #1d1f24;
+    --dark-opacity4-color: rgba(0, 0, 0, 0.4);
+    --dark-opacity7-color: rgba(0, 0, 0, 0.7);
+    --light-color: #fff;
+    --light-gray-color: #f2f3f6;
+    --light-opacity7-color: rgba(255, 255, 255, 0.7);
+    --light-opacity2-color: rgba(255, 255, 255, 0.2);
+    --light-opacity3-color: rgba(255, 255, 255, 0.3);
+    --point-color: #ff565c;
+  }
+
+/* reset */
+html {
+    font-size: 62.5%;
+}
+body {
+    margin: 0;
+    color: var(--dark-color);
+}
+ul,
+ol {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+h1 {
+    font-weight: normal;
+    margin: 0;
+}
+dl,
+dd,
+p {
+margin: 0;
+}
+button,
+input {
+appearance: none;
+border: 0;
+padding: 0;
+background-color: transparent;
+    border-radius: 0;
+}
+button {
+cursor: pointer;
+}
+a {
+text-decoration: none;
+cursor: pointer;
+}
+a:hover,
+a:focus {
+text-decoration: underline;
+}
+img {
+vertical-align: top;
+}
+fieldset {
+border: 0 none;
+margin: 0;
+padding: 0;
+}
+
+/* 공통 */
+.hidden_txt,
+legend {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  color: rgba(0, 0, 0, 0);
+}
+.hide {
+  display: none !important;
+}
+
+
+/* 스타일 */
+body {
+    padding-top: 7.1rem;
+}
+.wrap {
+    min-width: 32rem;
+}
+.main_container > .inner,
+.header > .inner,
+.footer > .inner {
+    margin: 0 auto;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    height: 7rem;
+    top: 0;
+    border-bottom: 1px solid #eee;
+}
+.header > .inner,
+.footer > .inner {
+  display: flex;
+}
+.header > .inner {
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+    font-size: 2.4rem;
+    font-weight: bold;
+    padding-left: 2rem;
+    position: relative;
+}
+.header .logo:after {
+    content: "";
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    bottom : 0.7rem ;
+    right: -0.7rem;
+    background-color: var(--point-color);
+
+}
+.gnb {
+    display: none;
+}
+.btn_open_menu {
+    width: 6rem;
+    height: 100%;
+    position: relative;
+}
+.btn_open_menu span ,
+.btn_open_menu:after ,
+.btn_open_menu:before {
+    content: "";
+    position: absolute;
+    width: 3rem;
+    height: 0.2rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--dark-color);
+}
+.btn_open_menu:after {
+    margin-top: -0.7rem;
+}
+.btn_open_menu::before {
+    margin-top: 0.7rem;
+}
+
+.main_container > .inner {
+    padding: 2rem;
+}
+.card {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 2rem;
+    min-height: 27.4rem;
+}
